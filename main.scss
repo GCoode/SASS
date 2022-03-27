@@ -1,0 +1,30 @@
+@import "style";
+
+header{
+    .nav-container{
+        @include flexible;
+        justify-content: $color-primario;
+        .logo{
+            h1{
+                color: blue;
+            }
+        }
+        nav ul{
+            @include flexible;
+            li{
+                @include Break(1000px){
+                    @include flexible;
+                }
+                list-style: none;
+                margin-left: nada(100);
+                a{
+                    text-decoration: none;
+                    color: aqua;
+                    &:hover{
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}

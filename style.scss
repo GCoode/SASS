@@ -1,0 +1,29 @@
+$color-primario: red;
+$color-primario: space-between;
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+@function nada($pero){
+    @return ($pero / 16) * 1em;
+}
+
+@mixin flexible{
+    display: flex;
+}
+@mixin Break($pero) {
+    @media (max-width: $pero){
+        @content;
+    }
+}
+@mixin send($value) {
+    width: $value;
+    height: $value;
+}
